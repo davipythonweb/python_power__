@@ -1,7 +1,11 @@
 # api_ecommerce__
-Api e-commerce com Djnago-Rest-framework
+<summary>
+  Api e-commerce com Djnago-Rest-framework
+</summary>
 
-<details>CRUD de produtos.</details>
-<details>Gestão de carrinho de compras.</details>
-<details>Processamento de pedidos.</details>
-<details>Integração com sistemas de pagamento.</details>
+<details>
+  CRUD de produtos.
+  Gestão de carrinho de compras.
+  Processamento de pedidos.
+  Integração com sistemas de pagamento.
+</details>
