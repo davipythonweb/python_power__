@@ -4,7 +4,7 @@
 </summary>
 
 <details>
-  CRUD de produtos.
+  CRUD de produtos.<br>
   Gestão de carrinho de compras.
   Processamento de pedidos.
   Integração com sistemas de pagamento.
