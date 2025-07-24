@@ -20,3 +20,15 @@
 # Ao digitar no teclado do computador=>
 # Exemplo a tecla A = 65 na tabela ASCII
 # binário eh = 1000001
+
+# A linguagem de programação eh uma abstração
+#  para nao ficar escrevendo zeros e um.
+
+# por exemplo=>
+#  1 - a linguagem ASSEMBLE que eh de Baixo Nivel
+# ou seja , mais perto do HARDWARE do computador
+# 2 - o Nivel medio temos a linguagem C
+# 3 - Alto nivel, a linguagem PYTHON
+
+# no finAL DAS CONTAS 
+# TUDO EH CONVERTIDO PARA BINÁRIO
