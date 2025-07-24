@@ -1,0 +1,1 @@
+# aprendendo python pelo terminal!
