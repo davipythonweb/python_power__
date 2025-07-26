@@ -3,8 +3,8 @@ import time     # para medir o tempo de mineração
 
 # Função que simula a mineração (prova de trabalho)
 def minerar_bloco(dados, dificuldade):
-    nonce = 0  # número que será alterado até encontrar o hash válido
-    prefixo = '0' * dificuldade  # exemplo: '0000' se dificuldade for 4
+    nonce = 0  # número que será alterado até encontrar o hash válido(determina onde o codigo começa a procurar.)
+    prefixo = '0' * dificuldade  # exemplo: '0000' se dificuldade for 4(nivel de dificuldade de satisfaçao)
 
     print(f"Iniciando a mineração com dificuldade {dificuldade}...")
     inicio = time.time()
@@ -30,6 +30,6 @@ def minerar_bloco(dados, dificuldade):
 
 # Exemplo de uso
 dados_do_bloco = "Transação de Alice para Bob: 10 moedas"
-dificuldade = 1  # Aumente para 5 ou 6 para ver ficar mais difícil
+dificuldade = 1  # Aumente para 5 ou 6 para ver ficar mais difícil (target, simboliza os zeros)
 
 minerar_bloco(dados_do_bloco, dificuldade)
