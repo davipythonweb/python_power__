@@ -92,3 +92,53 @@ for bloco in blockchain:
     print("Hash anterior:", bloco.hash_anterior)
     print("Nonce:", bloco.nonce)
     print("Hash:", bloco.hash)
+
+
+
+
+
+# --- FUNÇÃO DE AUDITORIA DA BLOCKCHAIN ---
+
+def auditar_blockchain(blockchain, target):
+    """
+    Verifica a integridade de toda a blockchain:
+    - Confirma que os hashes estão corretos.
+    - Garante que cada hash atende ao target.
+    - Verifica o encadeamento entre os blocos.
+    """
+    print("\n🔍 Iniciando auditoria da blockchain...")
+
+    for i, bloco in enumerate(blockchain):
+        # Recria o texto base que foi usado para minerar este bloco
+        texto_bloco = f"{bloco.indice}{bloco.timestamp}{bloco.dados}{bloco.hash_anterior}"
+
+        # Recalcula o hash com o nonce encontrado
+        texto = texto_bloco + str(bloco.nonce)
+        hash_bytes = hashlib.sha256(texto.encode('utf-8')).digest()
+        hash_int = int.from_bytes(hash_bytes, byteorder='big')
+        hash_hex = hash_bytes.hex()
+
+        print(f"\n🧱 Verificando Bloco {bloco.indice}...")
+        
+        # Verifica se o hash armazenado é o mesmo que o recalculado
+        if hash_hex != bloco.hash:
+            print("❌ Erro: o hash armazenado não corresponde ao recalculado.")
+            return False
+
+        # Verifica se o hash cumpre a dificuldade (menor que o target)
+        if hash_int >= target:
+            print("❌ Erro: o hash não atende à dificuldade (target).")
+            return False
+
+        # Se não é o primeiro bloco, verifica se o hash do anterior bate com o hash_anterior atual
+        if i > 0 and bloco.hash_anterior != blockchain[i - 1].hash:
+            print("❌ Erro: hash_anterior não corresponde ao hash do bloco anterior.")
+            return False
+
+        print("✅ Bloco válido.")
+
+    print("\n✅✅ Toda a blockchain é válida!")
+    return True
+
+# --- EXECUTA A AUDITORIA APÓS MONTAR A BLOCKCHAIN ---
+auditar_blockchain(blockchain, target_int)
