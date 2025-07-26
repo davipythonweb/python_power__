@@ -30,6 +30,6 @@ def minerar_bloco(dados, dificuldade):
 
 # Exemplo de uso
 dados_do_bloco = "Transação de Alice para Bob: 10 moedas"
-dificuldade = 4  # Aumente para 5 ou 6 para ver ficar mais difícil
+dificuldade = 1  # Aumente para 5 ou 6 para ver ficar mais difícil
 
 minerar_bloco(dados_do_bloco, dificuldade)
