@@ -1,6 +1,11 @@
 import hashlib  # biblioteca para gerar hashes (ex: SHA-256)
 import time     # para medir o tempo de mineração
 
+"""nonce= NUMERO ONDE INICIA A PROCURAR
+dificuldade= NUMERO DE ZEROS
+dados=A MENSSAGEM ENVIADA
+hash=NUMERO EXADECIMAL GERADO POR SHA-256"""
+
 # Função que simula a mineração (prova de trabalho)
 def minerar_bloco(dados, dificuldade):
     nonce = 0  # número que será alterado até encontrar o hash válido(determina onde o codigo começa a procurar.)
@@ -30,6 +35,6 @@ def minerar_bloco(dados, dificuldade):
 
 # Exemplo de uso
 dados_do_bloco = "Transação de Alice para Bob: 10 moedas"
-dificuldade = 1  # Aumente para 5 ou 6 para ver ficar mais difícil (target, simboliza os zeros)
+dificuldade = 1  # Aumente para 5 ou 6 para ver ficar mais difícil ( simboliza os zeros)
 
 minerar_bloco(dados_do_bloco, dificuldade)
