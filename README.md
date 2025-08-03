@@ -5,5 +5,5 @@
 
 <details>
  python - devops
- python Base - LinuxTIPS
+ python Base - LinuxTIPS - 2025
 </details>
