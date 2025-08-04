@@ -1,7 +1,7 @@
 # class - 3 python base linux-tips
 
 # Python => PLR , python language reference
-# criador do python => Guido Vam rossum
+# criador do python => Guido Vam rossum(Holanda)
 
 # CPython eh a implementação oficial do python!
 # por baixo dos panos ele usa a linguagem C.
