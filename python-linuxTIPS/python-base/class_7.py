@@ -16,3 +16,5 @@
 # Assignment = instruçao que pega o retorno
 #  de uma expressao e processa o seu valor
 # com o intuito de armazenar.
+
+# exemplo = soma=40+2, soma += 3, soma -= 3
