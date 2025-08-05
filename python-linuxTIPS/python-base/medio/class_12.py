@@ -1,6 +1,6 @@
 # aula 12
 
-# tipos de dados = textos
+# tipos de dados = textos (OBS:sao iteraveis)
 
 # str , plural = strings -> varios caracteres
 # exemplo para saber quantos metodos há: len(dir(str)) = 81 metodos
