@@ -22,7 +22,7 @@
 # Tipos de dados primarios = Scalar types(representam um unico valor)
 # exemplo: int
 # exemplo para saber os metodos do objeto: dir(int)
-# exemplo para saber quantos metodos há: len(dir(int)) = 74
+# exemplo para saber quantos metodos há: len(dir(int)) = 74 metodos
 # OBS: os metodos que nao começam com: _  sao metodos PUBLICOS. como:'real'
 
 
