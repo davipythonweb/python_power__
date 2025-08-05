@@ -1,8 +1,8 @@
 # Aula 13
 
-# Formatação de textos
+# FORMATAÇAO DE TEXTOS
 
-# concatenando str com float
+# Concatenaçao-> concatenando str com float
 # nome = "Davi"
 # saldo = 30.0
 # "O saldo do " + nome + " eh de " + str(saldo)
@@ -11,5 +11,11 @@
 # Interpolaçao
 # nome = "Davi"
 # saldo = 30.0
-# template = "O saldo do %s eh o total de %f"
+# template = "O saldo do %s eh o total de %.2f"
 # resposta: 'O saldo do Davi eh o total de 30.000000'
+
+# str.format
+# exemplo:
+# msg = "Olá, {} voce eh o player n {} e voce tem {} pontos"
+# mgs.format("Davi", 3, 987.3)
+# resposta: 'Ola, Davi voce tem 3 pontos'
