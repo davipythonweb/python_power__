@@ -23,15 +23,23 @@
 
 # exemplos de str.format:
 """
+atribuir nome
 In [50]: "{}".format("Eliote")
 Out[50]: 'Eliote'
 
+centralizar
 In [51]: "{:^11}".format("Eliote")
 Out[51]: '  Eliote   '
 
+justificar a direita
 In [52]: "{:>11}".format("Eliote")
 Out[52]: '     Eliote'
 
+justificar a esquerda
 In [53]: "{:<11}".format("Eliote")
 Out[53]: 'Eliote     '
+
+centralizar e separar com traços
+In [56]: "{:-^20}".format("Eliote")
+Out[56]: '-------Eliote-------'
 """
