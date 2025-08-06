@@ -50,3 +50,20 @@ Out[56]: '-------Eliote-------'
 # saldo = 30.0
 # f"ola, {} voce tem {} de saldo."
 # resposta: 'Ola, Davi voce tem 30.0 de saldo.'
+
+# PARA IMPRIMIR emotions com unicode
+# exemplo: unicode : 1F995
+# como fazer: \U000 + unicode
+# ficando: \U0001F995
+# resultado: print("\U0001F995")
+# resposta:🦕
+
+# OUTRA FORMA DE IMPRIMIR emotions
+# print("\N{green apple}")
+# resposta: 🍏
+# print("\N{red apple}")
+# resposta: 🍎 
+# print("\N{monkey}")
+# resposta: 🐒
+# print("\N{party popper}")
+# resposta: 🎉
