@@ -17,5 +17,21 @@
 # str.format
 # exemplo:
 # msg = "Olá, {} voce eh o player n {} e voce tem {} pontos"
+# msg = "Olá, {} voce eh o player n {:03d} e voce tem {:.3f} pontos"
 # mgs.format("Davi", 3, 987.3)
 # resposta: 'Ola, Davi voce tem 3 pontos'
+
+# exemplos de str.format:
+"""
+In [50]: "{}".format("Eliote")
+Out[50]: 'Eliote'
+
+In [51]: "{:^11}".format("Eliote")
+Out[51]: '  Eliote   '
+
+In [52]: "{:>11}".format("Eliote")
+Out[52]: '     Eliote'
+
+In [53]: "{:<11}".format("Eliote")
+Out[53]: 'Eliote     '
+"""
