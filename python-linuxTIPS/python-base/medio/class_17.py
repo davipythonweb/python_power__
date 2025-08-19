@@ -30,3 +30,11 @@
 # ou usando o metodo union:
 # set(conjunto_a).union(set(conjunto_b))
 # {1, 2, 3, 4, 5, 6, 7, 8}
+
+# COMPARAR UM PARA MUITOS ELEMENTOS
+# O(n)
+
+# COMPARAR UM PARA TODOS OS ELEMENTOS DE UM set
+# O(1) => operação constante
+# OBS: o python utiliza o Hash Table para 
+# comparar ou buscar em conjuntos(deixando a busca mais rapida.)
