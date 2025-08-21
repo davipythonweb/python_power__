@@ -6,3 +6,7 @@
 
 # utilizando stdin , input:
 # nome = input("Qual eh o seu nome?")
+
+# OBS:Toda vez que o input lê as imformaçoes,
+#  sempre sera em formato string.
+
