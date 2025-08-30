@@ -1,7 +1,9 @@
 # aula 24 - Linux Tips
-# development!
 
 # tratamentos de erros com Excessões
+
+# CONTEUDO PRATICO NO ARQUIVO errors.py
+
 
 
 # Existem duas abordagens para resolver erros:
