@@ -8,3 +8,7 @@
 #  existe outra interface, chamada stderr
 
 # existe uma biblioteca de logs padrão do python : logging
+
+# mostrar a mensagem do log na tela com: StreamHandler
+# exportar a mensagem do log com o metodo: RotatingFileHandler
+
