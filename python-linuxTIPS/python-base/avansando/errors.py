@@ -90,8 +90,8 @@ except FileNotFoundError as e:
     sys.exit(1)
     #TODO: Usar o retry
 else:
-    print("Sucesso!")
-finally:
+    print("Sucesso!") # só mostrará se nao houver errors.
+finally: # sempre aparecera!
     print("Execute isso sempre!")
 
 
