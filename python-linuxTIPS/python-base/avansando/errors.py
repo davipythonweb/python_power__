@@ -55,7 +55,7 @@ except: # Bare except(pega qualquer erro que acontecer)
 try:
     names = open("names.txt").readlines() # FileNotFoundError
     1 / 1 # ZeroDivisionError
-    print(names.banana) # AttributeError
+    print(names.append) # AttributeError
 except FileNotFoundError:
     print("[ERROR 1] File names.txt not found!")
     sys.exit(1)
@@ -65,6 +65,16 @@ except ZeroDivisionError:
 except AttributeError:
     print("[ERROR 3] List doesn't have banana!")
     sys.exit(1)
+
+
+# PEGANDO A MENSSAGEM ESPECIFICA DO ERRO E IMPRIMINDO:
+"""
+try:
+    names = open("names.txt").readlines() # FileNotFoundError
+except FileNotFoundError as e:
+    print(f" {str(e)}.")
+    sys.exit(1)
+""" #TODO: Usar o retry
 
 # EAFP => Easy to Ask Forgiveness than permission
 # VERIFICANDO O NUMERO DE LINHAS
