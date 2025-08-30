@@ -3,7 +3,7 @@
 # tratamentos de erros com Excessões
 
 # CONTEUDO PRATICO NO ARQUIVO errors.py
-
+# tambem arquivo names.txt
 
 
 # Existem duas abordagens para resolver erros:
