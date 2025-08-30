@@ -14,17 +14,18 @@ from logging import handlers
 # TODO: usar lib (loguru)
 # o log PODE SER CUSTOMIZADO:
 log_level = os.getenv("LOG_LEVEL", "WARNING").upper() #var ambient
+
     # instancia de log
-# log = logging.Logger("Mr.Robot", logging.DEBUG)
-log = logging.Logger("Mr.Robot", log_level)
+# log = logging.Logger("Mr.Robot", logging.DEBUG) # com as mensagens padrao python
+log = logging.Logger("Mr.Robot", log_level) # com a var de ambiente
 
     # level do log
-# console_handler = logging.StreamHandler() #handler para console
-# console_handler.setLevel(logging.DEBUG) # setando level do handler
+# console_handler = logging.StreamHandler() #handler para console/terminal
+# console_handler.setLevel(logging.DEBUG) #setando level do handler
 # ou
 file_handler = handlers.RotatingFileHandler( #handler para arquivo
     "meulog.log",
-    maxBytes=100, # 10 ** 6
+    maxBytes=500, # 10 ** 6
     backupCount=10,
 )
 # file_handler.setLevel(logging.DEBUG)
@@ -44,6 +45,7 @@ file_handler.setFormatter(format_log) #objeto dentro do handler
 log.addHandler(file_handler) #adiciona o handler ao log
 
 
+# TIPOS DE MENSAGEM=>
 
 # logging.debug("Mensagem pro dev.")
 # logging.info("Mensagem geral para usuarios")
@@ -59,7 +61,7 @@ log.addHandler(file_handler) #adiciona o handler ao log
 
 # logging.critical("DEU PROBLEMA GERAL!")
 
-"""
+""" exemplo:
 try:
     1 / 0
 except ZeroDivisionError as e:
@@ -70,7 +72,7 @@ except ZeroDivisionError as e:
 """
 
 # com o padrao de erros
-"""
+""" exemplo2:
 try:
     1 / 0
 except ZeroDivisionError as e:
