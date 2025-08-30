@@ -70,6 +70,17 @@ except AttributeError:
     sys.exit(1)
 """
 
+
+# DESCOBRINDO UM TIPO DE ERRO, erro generico.
+
+"""
+try:
+    raise RuntimeError("Ocorreu um erro")
+except Exception as e:
+    print(str(e))
+
+"""
+
 # PEGANDO A MENSSAGEM ESPECIFICA DO ERRO E IMPRIMINDO:
 # UM BLOCO completo do try except:
 try:
@@ -91,3 +102,4 @@ try:
 except:
     print("[ERROR 4] Missing name in the list!")
     sys.exit(1)
+
