@@ -37,14 +37,33 @@ else:
 
 # ===>ESTA ABORDAGEM para errors EH A MELHOR!<=====
 # SEGUNDA: EAFP => Easy to Ask Forgiveness than permission : É mais fácil pedir perdão do que permissão. usa-se o try, except.
+# OBS: tratamento de erro tem que ser sempre ESPECIFICO!!!
 
 
 # EAFP => Easy to Ask Forgiveness than permission
 # VERIFICANDO SE EXISTE O ARQUIVO.
+"""
 try:
-    names = open("names.txt").readlines()
-except:
+    names = open("names.txt").readlines() # FileNotFoundError
+    1 / 0 # ZeroDivisionError
+    print(names.banana) # AtributeError
+except: # Bare except(pega qualquer erro que acontecer)
     print("[ERROR 1] File names.txt not found!")
+    sys.exit(1)
+"""
+
+try:
+    names = open("names.txt").readlines() # FileNotFoundError
+    1 / 1 # ZeroDivisionError
+    print(names.banana) # AttributeError
+except FileNotFoundError:
+    print("[ERROR 1] File names.txt not found!")
+    sys.exit(1)
+except ZeroDivisionError:
+    print("[ERROR 2] You cant divide by zero!")
+    sys.exit(1)
+except AttributeError:
+    print("[ERROR 3] List doesn't have banana!")
     sys.exit(1)
 
 # EAFP => Easy to Ask Forgiveness than permission
@@ -52,5 +71,5 @@ except:
 try:
     print(names[2])
 except:
-    print("[ERROR 2] Missing name in the list!")
+    print("[ERROR 4] Missing name in the list!")
     sys.exit(1)

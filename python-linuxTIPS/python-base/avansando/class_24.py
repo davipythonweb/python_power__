@@ -15,3 +15,5 @@
 # SEGUNDA: EAFP => Easy to Ask Forgiveness than permission : É mais fácil pedir perdão do que permissão.
 
 # usa-se o try , except
+
+# OBS: tratamento de erro tem que ser sempre ESPECIFICO!!!
