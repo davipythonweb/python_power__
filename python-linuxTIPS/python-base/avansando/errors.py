@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 # a instrução abre o arquivo e o lê para
 #  imprimir algo
@@ -52,6 +53,8 @@ except: # Bare except(pega qualquer erro que acontecer)
     sys.exit(1)
 """
 
+# USANDO VARIAS EXCESSÔES:
+"""
 try:
     names = open("names.txt").readlines() # FileNotFoundError
     1 / 1 # ZeroDivisionError
@@ -65,16 +68,21 @@ except ZeroDivisionError:
 except AttributeError:
     print("[ERROR 3] List doesn't have banana!")
     sys.exit(1)
-
+"""
 
 # PEGANDO A MENSSAGEM ESPECIFICA DO ERRO E IMPRIMINDO:
-"""
+# UM BLOCO completo do try except:
 try:
     names = open("names.txt").readlines() # FileNotFoundError
 except FileNotFoundError as e:
     print(f" {str(e)}.")
     sys.exit(1)
-""" #TODO: Usar o retry
+    #TODO: Usar o retry
+else:
+    print("Sucesso!")
+finally:
+    print("Execute isso sempre!")
+
 
 # EAFP => Easy to Ask Forgiveness than permission
 # VERIFICANDO O NUMERO DE LINHAS
