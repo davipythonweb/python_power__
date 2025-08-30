@@ -11,7 +11,7 @@ names = open("names.txt").readlines()
 # PRIMEIRA: LBYL => Look Before You Leap : Olhe antes de atravessar a rua, ou de pular
 
 if len(names) >= 3:
-    print(names[4])
+    print(names[2])
 else:
-    print("O nome nao esta na lista!")
+    print("[ERROR] Missing name in the list!")
     sys.exit(1)
