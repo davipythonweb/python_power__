@@ -3,10 +3,11 @@
 
 import logging
 
+
 # Handler eh a classe responsavel pelo destino
 # de onde o log sera impresso
 
-# PODE SER CUSTOMIZADO:
+# o log PODE SER CUSTOMIZADO:
     # nova instancia
 log = logging.Logger("__name__", logging.DEBUG)
     # level do log
@@ -14,9 +15,12 @@ console_handler = logging.StreamHandler()
 console_handler.setLevel(logging.DEBUG) 
     # formatar o log
 format_log = logging.Formatter(
-    '%(asctime)s %(names)s %(levelname)s l:%(lineno)d f:%(filename)s: %(message)s'
+    '%(asctime)s %(name)s %(levelname)s'
+     ' l:%(lineno)d f:%(filename)s: %(message)s'
 )
+console_handler.setFormatter(format_log)
     # destino do log
+log.addHandler(console_handler)
 
 
 
