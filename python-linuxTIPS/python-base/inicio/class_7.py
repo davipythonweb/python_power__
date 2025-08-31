@@ -18,3 +18,6 @@
 # com o intuito de armazenar.
 
 # exemplo = soma=40+2, soma += 3, soma -= 3
+
+# Actions
+# funçao / metodo / instruçao
