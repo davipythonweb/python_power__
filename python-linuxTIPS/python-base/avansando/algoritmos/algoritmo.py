@@ -1,5 +1,5 @@
 # PSEUDO CODIGO
-import ir, pegar, pedir, tem, comer, ficar
+import ir, pegar, pedir, tem, comer, ficar # type: ignore
 
 # Premissas
 today = "Segunda"
