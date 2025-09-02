@@ -28,3 +28,9 @@ for line in open("post.txt"):
         dados[key] = valor.strip()
 
 print(dados)
+
+# imprimindo somente os numeros pares
+for num in range(1, 20):
+    if num % 2 != 0:
+        continue # joga o codigo la pra cima
+    print(num)
