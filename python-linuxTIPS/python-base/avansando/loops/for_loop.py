@@ -22,6 +22,8 @@ dados = {
     for line in open("post.txt")
     if ":" in line
 }
+
+# o for direto
 dados = {}
 for line in open("post.txt"):
     if ":" in line:
