@@ -11,12 +11,21 @@ people = [
     {
         "name":"Eliote Alderson",
         "balance":500,
-        "role":"engenier"
+        "role":"Engenier"
     },
     {
         "name":"Roger",
         "balance":450,
-        "role":"manager"
+        "role":"Manager"
     }
 ]
 
+def add_points(person, value):
+    if person["role"] == "Manager":
+        value *=  2
+    person["balance"] += value
+
+for person in people:
+    add_points(person, 100)
+
+print(people)
