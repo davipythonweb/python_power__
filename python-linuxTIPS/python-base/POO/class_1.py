@@ -5,7 +5,7 @@
 
 # exemplo para iniciar a aula de POO
 
-# exemplo de forma imperativa
+# exemplo de programaçao com paradigma imperativo
 
 people = [
     {
