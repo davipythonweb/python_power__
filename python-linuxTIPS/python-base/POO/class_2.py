@@ -7,13 +7,13 @@
 # Atributos - valores definidos na classes e nos objetos(instancia)
 # Métodos - Funçao definida no escopo da classse
 
-class Person: # classes usa-se: pascalCase , UpperCamelCase
+class Person: # Nas classes usa-se: pascalCase , UpperCamelCase
     """ Representa uma pessoa"""
     company_name = "Dunder Mifflin" # variaveis usa-se: snake_Case
     work_address = "Rua Stanton. Pensilvania"
     balance = 0
 
-    # funçoes usa-se: snake_Case
+    # Nas funçoes dentro das classes[metodos] usa-se: snake_Case
     def add_points(person, value): # funçao dentro de uma classe eh um: Método.
         if person.role == "Manager":
             value *= 2
