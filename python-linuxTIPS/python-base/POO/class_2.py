@@ -1,6 +1,6 @@
 # PROGRAMAÇAO ORIENTADA A OBJETOS
 # POO
-# SURGIOU POR VOLTA DE 1970, com um matematico da empresa XEROX, 
+# SURGIOU POR VOLTA DE 1970, com um matematico da empresa XEROX, o Allan Key
 
 # CLasses 'class' - MaterialdeEscritorio, Eletronico, Gadget, Frutas
 # Objetos - Intancias criadas apartir da classe - caneta, tv, relogio, uva
