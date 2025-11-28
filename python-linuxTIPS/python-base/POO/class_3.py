@@ -14,6 +14,7 @@ jim = Person()
 jim.name = "Jim Halpert"
 jim.role = "Salesman"
 jim.add_points(100)
+print(jim.name, jim.balance)
 
 pam = Person()
 pam.name = "Pam Besly"
