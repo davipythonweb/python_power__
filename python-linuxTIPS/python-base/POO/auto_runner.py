@@ -1,6 +1,6 @@
 import subprocess
-from watchdog.observers import Observer
-from watchdog.events import FileSystemEventHandler
+from watchdog.observers import Observer # type: ignore
+from watchdog.events import FileSystemEventHandler # type: ignore
 import time
 import os
 
