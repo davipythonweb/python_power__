@@ -14,4 +14,4 @@
 * winget install --id Starship.Starship
 
 #### executar no terminal
-* Invoke-Expression (&starship init powershell)
+* Invoke-Expression (&starship init powershell) 
