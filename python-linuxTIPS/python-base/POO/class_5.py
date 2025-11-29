@@ -14,11 +14,13 @@ class Animal:
 
 
 # 2º PILAR
-# Herança
+# Herança + Abstraçao
+from abc import ABC
 
 # super classe
-class Fruta:
+class Fruta(ABC):
     reino = "vegetalia" # Classe abstrata/ base
+    
     def __init__(self, cores):
         self.cores = cores
 
@@ -30,3 +32,10 @@ minha_maça = Maça(cores=['verde', 'branco'])
 print(minha_maça.cores)
 print(minha_maça.reino)
 print(minha_maça.image)
+
+class Melancia(Fruta):
+    image = "🍉"
+
+minha_melancia = Melancia(cores=['verde', 'vermelho', 'preto'])
+print(minha_melancia.cores)
+print(minha_melancia.image)
