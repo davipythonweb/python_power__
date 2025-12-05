@@ -14,6 +14,7 @@ class Animal:
 
 
 # 2º PILAR
+# Herança: Capacidade de criaçao de classe base e apartir dela herdar atributos e criar outros objetos.
 # Herança + Abstraçao
 from abc import ABC
 
@@ -24,12 +25,17 @@ class Fruta(ABC):
     def __init__(self, cores):
         self.cores = cores
 
+# Python permite herança multipla.
+
+class Comida(ABC):
+    preço = 4.5
+
 # derivadas (sub classe)
-class Maça(Fruta):   # herança em uma classe material
+class Maça(Fruta, Comida):   # herança em uma classe material
     image = "🍎"
 
 minha_maça = Maça(cores=['verde', 'branco'])
-print(minha_maça.cores)
+print(minha_maça.cores, minha_maça.preço)
 print(minha_maça.reino)
 print(minha_maça.image)
 
