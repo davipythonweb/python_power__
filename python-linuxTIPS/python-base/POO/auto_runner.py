@@ -4,7 +4,7 @@ from watchdog.events import FileSystemEventHandler # type: ignore
 import time
 import os
 
-FILE_TO_WATCH = "class_5.py"
+FILE_TO_WATCH = "class_6.py"
 
 class Handler(FileSystemEventHandler):
     def on_modified(self, event):
@@ -26,3 +26,6 @@ except KeyboardInterrupt:
     observer.stop()
 
 observer.join()
+
+
+# codigo para observar um arquivo e fazer as mudanças no documento e ja rodar o script python, apos ctrl + s
