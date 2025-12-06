@@ -48,3 +48,15 @@ se o objeto anda como um pato,
 parece um pato, faz quack como um pato,
 entao eh um pato!
 """
+
+# Outro exemplo de polimorfismo
+def funcao(*args):
+    ret = 0
+    for arg in args:
+        ret += arg
+    return ret
+
+print(funcao(1, 2, 3))
+print(funcao(1, 2, 3, 4))
+print(funcao(1, 2, 3, 4, 5))
+print(funcao())
