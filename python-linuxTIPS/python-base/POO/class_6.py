@@ -41,6 +41,7 @@ print_sound(frajola)
 
 
 # o polimorfismo esta baseado em uma caracteristica chamada => 
+
 # Duck Typing
 """
 se o objeto anda como um pato,
