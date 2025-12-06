@@ -11,3 +11,15 @@
 """ Encapsulamento: Capacidade de um objeto esconder a
     sua implementação interna e expor , apenas 
     o que for conveniente."""
+
+class Conta:
+    def __init__(self, cliente):
+        self.cliente = cliente
+
+conta = Conta(cliente='Eliote')
+
+print(dir(conta))
+
+print(conta.cliente)
+conta.cliente = 'Outro'
+print(conta.cliente)

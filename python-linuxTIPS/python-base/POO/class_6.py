@@ -60,3 +60,5 @@ print(funcao(1, 2, 3))
 print(funcao(1, 2, 3, 4))
 print(funcao(1, 2, 3, 4, 5))
 print(funcao())
+
+# a funçao funciona para todos os exemplos
