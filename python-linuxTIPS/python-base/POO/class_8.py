@@ -25,6 +25,7 @@ class Conta:
 
 conta = Conta(cliente='Eliote')
 conta.depositar(500)
+conta.depositar(200)
 print(conta.consultar())
 
 conta.sacar(100)
