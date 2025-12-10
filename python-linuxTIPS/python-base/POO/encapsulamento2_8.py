@@ -30,3 +30,5 @@ print(conta.consultar())
 
 conta.sacar(100)
 print(conta.consultar())
+
+print(dir(conta))  # veja que o atributo _saldo não aparece na lista de atributos públicos
