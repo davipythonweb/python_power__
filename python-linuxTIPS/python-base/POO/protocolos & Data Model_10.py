@@ -23,24 +23,17 @@
 # Um dos protocolos mais faceis de entender -> Printable
 
 class Cor: # Base Class
-    #  icon de quadrado branco
     icon = "⬜​​"
     def __str__(self):
         return self.icon
 
 class Amarelo(Cor):
-    # icon com quadrado amarelo
     icon = "🟨​"
 
 class Azul(Cor):
-    # icon com quadrado de cor azul
     icon = "🟦​"
 
-#  emotion de quadrado amarelo
-#  emotion = "\U0001F7E1"
-
 class Vermelho(Cor):
-    # icon com quadrado vermelho
     icon = "🟥​"
 
 print("Cores Primarias")
