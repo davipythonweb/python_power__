@@ -9,35 +9,36 @@
 # 1 Abstração
 # 2 Herança
 # 3 Polimorfismo
-# 4 Encapsulamento
+# 4 Encapsulamento => proteção de atributos e métodos de uma classe (publico[pode acessar fora da classe], protegido, privado[com anderline])
 
-# # propriedades getter, setter e deleter
+# # propriedades getter, setter e deleter,
+from abc import ABC # Abstract Base Class
 
-class Conta:
-    _tipo_de_conta = 'Poupança'  # Atributo (protegido)
-    __id_interno = 123456  # Atributo (privado) nao usar
-
+class Conta(ABC):
     def __init__(self, cliente):
         self.cliente = cliente
-        self.__saldo = 0  # Atributo (protegido)
+        self._saldo = 0  # Atributo (privado)
 
-    @property # propriedade getter para o atributo privado __saldo
+
+class ContaCorrente(Conta):
+    _id_interno = 123456  # Atributo (privado)
+
+    @property # propriedade getter para o atributo privado _saldo
     def saldo(self):
-        if self.__saldo <= 0:
+        if self._saldo <= 0:
             print('Saldo insuficiente ou zero!')
-        return self.__saldo
+        return self._saldo
     
-    @saldo.setter  # propriedade setter para o atributo privado __saldo
+    @saldo.setter  # propriedade setter para o atributo privado _saldo
     def saldo(self, valor):
-        self.__saldo += valor
+        self._saldo += valor
 
-    @saldo.deleter  # propriedade deleter para o atributo privado __saldo
+    @saldo.deleter  # propriedade deleter para o atributo privado _saldo
     def saldo(self):
-        self.__saldo = 0
-
+        self._saldo = 0
     
 
-conta = Conta(cliente='Noah')
+conta = ContaCorrente(cliente='Noah')
 print(conta.cliente)  # Acesso permitido
 print(conta.saldo) # Acesso permitido via propriedade
 
