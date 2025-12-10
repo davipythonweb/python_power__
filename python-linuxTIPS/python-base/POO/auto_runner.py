@@ -4,7 +4,7 @@ from watchdog.events import FileSystemEventHandler # type: ignore
 import time
 import os
 
-FILE_TO_WATCH = "class_8.py"
+FILE_TO_WATCH = "encapsulamento2_8.py"
 
 class Handler(FileSystemEventHandler):
     def on_modified(self, event):

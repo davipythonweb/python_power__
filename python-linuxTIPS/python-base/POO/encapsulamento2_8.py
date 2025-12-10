@@ -1,6 +1,7 @@
 # exemplo2 encapsulamento
 
 class Conta:
+    # convençao de nomes(usar variaveis com underline no inicio) para atributos protegidos
     _tipo_de_conta = 'Corrente'  # Atributo (protegido)
 
     def __init__(self, cliente):
