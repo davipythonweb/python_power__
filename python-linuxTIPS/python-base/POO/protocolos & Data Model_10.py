@@ -20,21 +20,27 @@
 # __len__: Retorna o comprimento de um objeto.
 # __repr__: Fornece uma representação oficial de um objeto.
 
-# Um dos protocolos mais faceis de entender -> Printable
+# Um dos protocolos mais faceis de entender -> Printable -> imprimir objetos
 
 class Cor: # Base Class
+    english_name = "color"
     icon = "⬜​​"
+
+    # reescrevendo o método __str__
     def __str__(self):
-        return self.icon
+        return f"{self.english_name} - {self.icon}"
 
 class Amarelo(Cor):
     icon = "🟨​"
+    english_name = "yellow"
 
 class Azul(Cor):
     icon = "🟦​"
+    english_name = "blue"
 
 class Vermelho(Cor):
     icon = "🟥​"
+    english_name = "red"
 
 print("Cores Primarias")
 print(Amarelo())
