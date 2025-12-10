@@ -22,6 +22,8 @@
 
 # Um dos protocolos mais faceis de entender -> Printable -> imprimir objetos
 
+print("protocolo Printable" + "\n")
+
 class Cor: # Base Class
     english_name = "color"
     icon = "⬜​​"
@@ -42,7 +44,21 @@ class Vermelho(Cor):
     icon = "🟥​"
     english_name = "red"
 
+
+
 print("Cores Primarias")
 print(Amarelo())
 print(Azul())
 print(Vermelho())
+
+print("-" * 20)
+
+# Outro Protocolo
+# Addible -> somar objetos
+
+print("protocolo Addible" + "\n")
+
+print( 1 + 1 )
+print("Eliote " + "Alderson")
+print([1, 2] + [3, 4])
+
