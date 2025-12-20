@@ -31,6 +31,16 @@ class Cor: # Base Class
     # reescrevendo o método __str__
     def __str__(self):
         return f"{self.english_name} - {self.icon}"
+    
+    def __add__(self, other):
+        mixtable = [
+            (Amarelo, Vermelho, Laranja),
+            (Azul, Amarelo, Verde),
+            (Vermelho, Azul, Violeta),
+        ]
+        for mix, result in mixtable:
+            if isinstance(self, mix) and isinstance(other, mix):
+                return result()
 
 class Amarelo(Cor):
     icon = "🟨​"
@@ -43,6 +53,20 @@ class Azul(Cor):
 class Vermelho(Cor):
     icon = "🟥​"
     english_name = "red"
+
+class Laranja(Cor):
+    icon = "🟧​"
+    english_name = "orange"
+
+class Verde(Cor):
+    icon = "🟩​"
+    english_name = "green"
+
+class Violeta(Cor):
+    icon = "🟪​"
+    english_name = "violet"
+
+
 
 
 
@@ -60,6 +84,20 @@ print("-" * 20)
 print("protocolo Addible" + "\n")
 
 print( 1 + 1 )
+print(5 .__add__(3)) # mesmo que 5 + 3
 print("Eliote " + "Alderson")
 print([1, 2] + [3, 4])
 
+print("-" * 20)
+
+print("Cores Primarias")
+amarelo = Amarelo()
+azul = Azul()
+vermelho = Vermelho()
+print(amarelo, azul, vermelho)
+
+
+print("Cores Secundarias")
+print("Amarelo + Vermelho", amarelo + vermelho)  # Laranja
+print("Azul + Amarelo", azul + amarelo)      # Verde
+print("Vermelho + Azul", vermelho + azul)     # Violeta     
