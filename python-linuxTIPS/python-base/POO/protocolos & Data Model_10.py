@@ -55,6 +55,7 @@ print("-" * 20)
 
 # Outro Protocolo
 # Addible -> somar objetos
+# ele tem dois metodos especiais: [atua in left] __add__ e [atua in right]__radd__
 
 print("protocolo Addible" + "\n")
 
