@@ -34,9 +34,9 @@ class Cor: # Base Class
     
     def __add__(self, other):
         mixtable = [
-            (Amarelo, Vermelho, Laranja),
-            (Azul, Amarelo, Verde),
-            (Vermelho, Azul, Violeta),
+            ((Amarelo, Vermelho), Laranja),
+            ((Azul, Amarelo), Verde),
+            ((Vermelho, Azul), Violeta),
         ]
         for mix, result in mixtable:
             if isinstance(self, mix) and isinstance(other, mix):
@@ -96,8 +96,10 @@ azul = Azul()
 vermelho = Vermelho()
 print(amarelo, azul, vermelho)
 
+print("-" * 20)
 
 print("Cores Secundarias")
 print("Amarelo + Vermelho", amarelo + vermelho)  # Laranja
 print("Azul + Amarelo", azul + amarelo)      # Verde
 print("Vermelho + Azul", vermelho + azul)     # Violeta     
+
