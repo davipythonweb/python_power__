@@ -103,3 +103,24 @@ print("Amarelo + Vermelho", amarelo + vermelho)  # Laranja
 print("Azul + Amarelo", azul + amarelo)      # Verde
 print("Vermelho + Azul", vermelho + azul)     # Violeta     
 
+print("-" * 20) 
+# Protocolo __contains__
+# Ele é usado para definir o comportamento do operador de associação 'in' em objetos personalizados.
+# sempre retorna True ou False
+
+class Paleta:
+    def __init__(self, *cores):
+        self._cores = cores
+
+    def __iter__(self):
+        return iter([cor for cor in  self._cores])
+    
+    def __contains__(self, item):
+        return item in [cor.icon for cor in self._cores]
+    
+print("-" * 20)
+
+rgb = Paleta(Vermelho(), Verde(), Azul())
+print("🟦​" in rgb)
+print("🟥​" in rgb)
+print("🟩​" in rgb)
