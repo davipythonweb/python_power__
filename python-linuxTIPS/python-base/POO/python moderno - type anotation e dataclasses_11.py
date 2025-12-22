@@ -36,9 +36,15 @@ quantidade = 5
 cliente_especial = True
 
 
+# criando um contrato (protocolo) para o tipo valor
+def calcula_total(valor: Decimal, quantidade: int) -> Decimal:
+    return valor * quantidade # chama o protocolo : __mul__
 
+"""
 def calcula_total(valor, quantidade):
     return valor * quantidade # chama o protocolo : __mul__
+
+"""
 
 if cliente_especial:
     valor = 4.3 #BUG
