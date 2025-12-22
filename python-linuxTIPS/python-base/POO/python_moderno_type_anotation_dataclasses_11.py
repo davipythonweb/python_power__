@@ -57,3 +57,33 @@ total = calcula_total(valor, quantidade)
 
 print("Tipo:", type(total))
 print(f"O total do carrinho é R$ {total:.2f}")
+
+
+print("-" * 50)
+# exemplo de classes sem usar dataclasses
+"""
+class Pessoa:
+    def __init__(self, pk: str, name: str, points: int):
+        self.pk = pk        
+        self.name = name
+        self.points = points
+"""
+
+# exemplo com dataclasses
+from dataclasses import dataclass
+
+@dataclass
+class Pessoa:
+    pk: str
+    name: str
+    points: int
+
+
+def funcao(dados: Pessoa):
+    pass
+
+dados = Pessoa(pk="luiz@gmail", name="Luiz", points=10)
+
+print(dados.name)
+
+funcao(dados)
