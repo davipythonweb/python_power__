@@ -4,7 +4,7 @@ from watchdog.events import FileSystemEventHandler # type: ignore
 import time
 import os
 
-FILE_TO_WATCH = "python moderno - type anotation e dataclasses_11.py"
+FILE_TO_WATCH = "python_moderno_type_anotation_dataclasses_11.py"
 
 class Handler(FileSystemEventHandler):
     def on_modified(self, event):

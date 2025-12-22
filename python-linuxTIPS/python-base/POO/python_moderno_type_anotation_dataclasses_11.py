@@ -40,14 +40,18 @@ cliente_especial = True
 def calcula_total(valor: Decimal, quantidade: int) -> Decimal:
     return valor * quantidade # chama o protocolo : __mul__
 
-"""
+""" 
 def calcula_total(valor, quantidade):
     return valor * quantidade # chama o protocolo : __mul__
 
-"""
-
 if cliente_especial:
     valor = 4.3 #BUG
+"""
+
+
+if cliente_especial:
+    valor = Decimal(4.3) #CORRETO
+
 
 total = calcula_total(valor, quantidade)
 
