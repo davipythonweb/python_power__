@@ -73,6 +73,7 @@ class Pessoa:
 from dataclasses import dataclass
 
 @dataclass
+# a dataclass cria o metodo __init__ automaticamente
 class Pessoa:
     pk: str
     name: str
