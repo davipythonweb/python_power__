@@ -1,9 +1,12 @@
 # python moderno - type anotation e dataclasses
 
 # ex. carrinho de compras
+# sempre para trabalhar com valores monetarios, usar a biblioteca decimal
+from decimal import Decimal
 
-produto = "Playstation 5"
-preco = 4500.00
+
+produto = "caneta BIC"
+preco = Decimal("2.50")
 quantidade = 5
 
 def calcula_total(valor, qtd):
