@@ -11,6 +11,18 @@ nome: str = "Caneta"
 numero: int = 10
 quantiade: float = 5.5
 active: bool = True
+
+def soma(a: int, b: int) -> int:
+    return a + b
+
+class Pessoa:
+    nome: str
+    idade: int
+
+
+print(Pessoa.__annotations__) onde ficam as anotaçoes de tipos
+
+onde usar: assinatura de funçao,def classe, metodos.
 """
 
 from decimal import Decimal
