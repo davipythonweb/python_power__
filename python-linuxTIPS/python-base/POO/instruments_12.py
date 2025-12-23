@@ -1,9 +1,11 @@
 # Abstração e Herança com dataclasses?
 # Tem enum no python?
+# dataclasses com valor default dao erro?
 
 from abc import ABC, abstractmethod
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from enum import Enum
+from typing import List
 
 # Enumeraçao / Enumerador
 class InstrumentKind(str, Enum):
@@ -24,6 +26,7 @@ class DataIntrumentMixin:
     name : str
     sound: str
     kind: InstrumentKind
+    colors: List[str] = field(default_factory=list)
 
 # Herança Múltipla
 class Instrument(DataIntrumentMixin, ABCInstrument):
