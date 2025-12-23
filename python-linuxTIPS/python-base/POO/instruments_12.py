@@ -37,6 +37,7 @@ class Instrument(DataIntrumentMixin, ABCInstrument):
 class Guitar(Instrument):
     sound: str = "Trom Trom"
     kind: InstrumentKind = InstrumentKind.string
+    colors: List[str] = field(default_factory=lambda: ["black", "white"] )
 
     def play(self):
         return self.sound
@@ -46,6 +47,7 @@ class Guitar(Instrument):
 class Flute(Instrument):
     sound: str = "Tooooot"
     kind: InstrumentKind = InstrumentKind.wind
+    colors: List[str] = field(default_factory=lambda: ["silver", "gold"] )
 
     def play(self):
         return self.sound
