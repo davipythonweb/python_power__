@@ -1,4 +1,4 @@
-from instruments_12 import Guitar, Flute, InstrumentKind, EletricGuitar
+from instruments_12 import Guitar, Flute, InstrumentKind, EletricGuitar, Distortion
 
 gianini = Guitar(name="Gianini", kind=InstrumentKind.string, colors=["green"])
 print(gianini.play())  # Output: Trom Trom
@@ -9,4 +9,4 @@ print(yamaha.play())   # Output: Tooooot
 print(yamaha.colors)   # Output: ['silver', 'gold']
 
 lespaul = EletricGuitar(name="Lespaul m3")
-print(lespaul.play())  # Output: wah~~~~wah~~~~wah
+print(lespaul.play(distortion=Distortion.whisper))  # Output: wah~~~~wah~~~~wah

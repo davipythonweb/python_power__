@@ -17,6 +17,10 @@ class InstrumentKind(str, Enum):
     wind = "wind"
     drums = "drums"
 
+class Distortion(str, Enum):
+    wave = "wave"
+    whisper = "whisper"
+
 # Classe Abstrata
 class ABCInstrument(ABC):
 
@@ -51,10 +55,13 @@ class Guitar(Instrument):
 class EletricGuitar(Guitar):
     sound: str = "wah wah wah"
 
-    def play(self, distortion="wave"):
+    def play(self, distortion= Distortion.wave):
         return_from_base_class = super().play()
         if distortion == "wave":
             return "~~~~".join(return_from_base_class.split())
+
+        elif distortion == "whisper":
+            return ".....".join(return_from_base_class.split())
         return return_from_base_class
 
 # Subclasses concretas 
