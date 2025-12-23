@@ -1,6 +1,3 @@
-# dataclasses abstracts, Enums, Fild, super()
-
-
 # Abstração e Herança com dataclasses?
 # Tem enum no python?
 
@@ -49,13 +46,3 @@ class Flute(Instrument):
 
     def play(self):
         return self.sound
-
-
-# em outro arquivo
-from instruments_12 import Guitar, Flute, InstrumentKind
-
-gianini = Guitar(name="Gianini")
-print(gianini.play())  # Output: Trom Trom
-
-yamaha = Flute(name="Yamaha")
-print(yamaha.play())   # Output: Tooooot
