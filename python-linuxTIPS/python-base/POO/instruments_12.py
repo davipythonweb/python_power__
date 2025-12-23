@@ -1,6 +1,10 @@
 # Abstração e Herança com dataclasses?
 # Tem enum no python?
 # dataclasses com valor default dao erro?
+# para que serve o super()?
+
+
+# OBS: tem o arquivo band_12.py que usa este arquivo
 
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
@@ -35,12 +39,23 @@ class Instrument(DataIntrumentMixin, ABCInstrument):
 # Subclasses concretas
 @dataclass
 class Guitar(Instrument):
+    n_strings: int = 6
     sound: str = "Trom Trom"
     kind: InstrumentKind = InstrumentKind.string
     colors: List[str] = field(default_factory=lambda: ["black", "white"] )
 
     def play(self):
         return self.sound
+    
+@dataclass
+class EletricGuitar(Guitar):
+    sound: str = "wah wah wah"
+
+    def play(self, distortion="wave"):
+        return_from_base_class = super().play()
+        if distortion == "wave":
+            return "~~~~".join(return_from_base_class.split())
+        return return_from_base_class
 
 # Subclasses concretas 
 @dataclass
