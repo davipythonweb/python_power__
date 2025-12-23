@@ -1,6 +1,6 @@
 from instruments_12 import Guitar, Flute, InstrumentKind
 
-gianini = Guitar(name="Gianini")
+gianini = Guitar(name="Gianini", kind=InstrumentKind.string)
 print(gianini.play())  # Output: Trom Trom
 
 yamaha = Flute(name="Yamaha")
