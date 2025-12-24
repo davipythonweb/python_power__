@@ -3,19 +3,60 @@
 # https://docs.python.org/3/tutorial/controlflow.html#match-statements
 # https://docs.python.org/3/reference/compound_stmts.html#the-match-statement
 
+"""\
+Jogo da Tartaruga
+
+comandos:
+    move x y
+    move steps
+    turn angle (default 90)
+    draw shape size (line|circle)
+    write text
+    stop | exit
+)
+"""
+
 from turtle import Turtle
 
 turtle = Turtle()
 turtle.shape("turtle")
 turtle.speed(3)
-turtle.color("black", "green")
+turtle.color("blue", "yellow")
 turtle.penup()
 
 while True:
-# icone de tartaruga no input
-    command = input("🐢>").strip()
-    if command == "exit":
-        break
-    if command == "draw":
-        turtle.pendown()
-        turtle.forward(20)
+    command: list[str] = input("🐢>").strip().split()
+
+    match command:
+
+        case ["move", *points]:
+            match points:
+                case [x, y]:
+                    turtle.goto(float(x), float(y))
+                case [steps]:
+                    turtle.forward(float(steps))
+
+        case ["turn", *options]:
+            match options:
+                case [angle]:
+                    turtle.right(float(angle))
+                case _:
+                    turtle.right(90)
+
+        case ["draw", shape, size]:
+            turtle.pendown()
+            match shape:
+                case "circle":
+                    turtle.circle(float(size))
+                case "line":
+                    turtle.forward(float(size))
+            turtle.penup()
+
+        case ["write", *text]:
+            turtle.write(" ".join(text), None, "center", "16pt 20")
+
+        case ["exit" | "stop" | "quit"]:
+            break
+
+        case _:
+            print("Invalid command")
