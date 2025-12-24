@@ -4,6 +4,7 @@
 # ex. carrinho de compras
 # sempre para trabalhar com valores monetarios, usar a biblioteca decimal
 
+
 """
 exemplo de type anotations:
 
