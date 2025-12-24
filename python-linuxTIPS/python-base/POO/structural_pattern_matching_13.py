@@ -8,10 +8,10 @@ from turtle import Turtle
 turtle = Turtle()
 turtle.shape("turtle")
 turtle.speed(3)
-turtle.color("blue", "yellow")
+turtle.color("black", "green")
+turtle.penup()
 
 while True:
-
 # icone de tartaruga no input
     command = input("🐢>").strip()
     if command == "exit":
